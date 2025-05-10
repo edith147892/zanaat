@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zanaat - Artesanía</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
+  <!-- FontAwesome gratuito -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">zanaat</div>
+    <nav class="navbar">
+      <a href="#">Inicio</a>
+      <a href="#">Tienda</a>
+    </nav>
+    <div class="icons">
+      <a href="#"><i class="fas fa-user"></i> Iniciar sesión</a>
+      <a href="#"><i class="fas fa-shopping-bag"></i><span id="cart-count">1</span></a>
+    </div>
+  </header>
+
+  <!-- Bienvenida -->
+  <section class="bienvenida">
+    <h1>Bienvenido a zanaat</h1>
+    <p>La venta de artesanía en línea, es la solución.</p>
+  </section>
+
+  <!-- Carrusel -->
+  <section class="carrusel-container">
+    <button class="prev">&#10094;</button>
+    <div class="carrusel" id="carrusel">
+      <img src="https://cdn.forbes.com.mx/2014/08/Cortesia-Artesanos-Mexico.jpg" alt="artesanías 1">
+      <img src="https://mundoejecutivo.com.mx/wp-content/uploads/2023/09/image-44-1.jpg" alt="artesanías 2">
+      <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2020/11/artesanias-teporingo-header-02.jpg" alt="artesanías 3">
+      <img src="https://images.squarespace-cdn.com/content/v1/6260879dc878dd6a2659f103/1661377343094-I7V3YHRJKEW3B0EYC7BH/Captura+de+Pantalla+2022-08-24+a+la%28s%29+16.41.11.png" alt="artesanías 4">
+      <img src="https://loscincosoles.com/wp-content/uploads/2021/04/cincosoles_banners-19-1536x1024.jpg" alt="artesanías 5">
+    </div>
+    <button class="next">&#10095;</button>
+  </section>
+
+  <section class="productos">
+    <!-- Producto 1 -->
+    <div class="producto" onclick="abrirModal('Bolso de alpaca', 'Bolso hecho a mano con lana de alpaca.', 20)">
+      <div class="img-container">
+        <img src="img/bolso.png" alt="Bolso de alpaca">
+        <div class="hover-info">Especificaciones</div>
+      </div>
+      <h3>Bolso de alpaca</h3>
+      <p class="precio">$20.00</p>
+    </div>
+  
+    <!-- Producto 2 -->
+    <div class="producto" onclick="abrirModal('Frasco de vidrio', 'Frasco de vidrio reciclado hecho en México.', 10)">
+      <div class="img-container">
+        <img src="C:\Apps\zanaat\img\guana.jpg" alt="Frasco de vidrio">
+        <div class="hover-info">Especificaciones</div>
+      </div>
+      <h3>Frasco de vidrio</h3>
+      <p class="precio">$10.00</p>
+    </div>
+  
+    <!-- Producto 3 -->
+    <div class="producto" onclick="abrirModal('Suéter tejido a mano', 'Hecho 100% con amor y estambre natural.', 25)">
+      <div class="img-container">
+        <img src="img/sueter.png" alt="Suéter tejido a mano">
+        <div class="hover-info">Especificaciones</div>
+      </div>
+      <h3>Suéter tejido a mano</h3>
+      <p class="precio">$25.00</p>
+    </div>
+  
+    <!-- Producto 4 -->
+    <div class="producto" onclick="abrirModal('Lentes clásicos', 'Armazón negro ligero y resistente.', 7.5)">
+      <div class="img-container">
+        <img src="img/lentes.png" alt="Lentes clásicos">
+        <div class="hover-info">Especificaciones</div>
+      </div>
+      <h3>Lentes clásicos</h3>
+      <p class="precio">$7.50</p>
+    </div>
+    <div id="productos-container" class="productos-lista"></div>
+  </section>
+  
+  
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <h2 id="modalTitulo"></h2>
+      <p id="modalDescripcion"></p>
+      <p id="modalPrecio" class="precio"></p>
+      <button onclick="agregarAlCarrito()">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <section class="historia">
+    <div class="historia-texto">
+      <h2>La historia completa</h2>
+      <h3>Del corazón de la tierra</h3>
+      <p>
+        zanaat es una empresa socialmente responsable que le entrega el poder a sus artesanos 
+        para promover sus habilidades tradicionales. Creemos en el uso de la tecnología para hacer el bien 
+        y estamos comprometidos en fortalecer las técnicas artesanales antiguas. Nos encanta usar nuestra 
+        marca para contar historias significativas que ayuden a mantener vivas las tradiciones.
+      </p>
+    </div>
+    <div class="historia-imagen">
+      <img src="img/historia.png" alt="Decoraciones artesanales">
+    </div>
+  </section>
+   
+   <!-- Información de contacto -->
+   <div class="contacto">
+    <p><i class="fas fa-phone-alt"></i> Contacto: 449 102 06 07</p>
+    <a href="https://wa.me/524491020607" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
+
+  <!-- Mapa de ubicación -->
+  <div class="mapa">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0933013191124!2d-122.38816488467897!3d37.770368979759774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7fd1e6b4d3d1%3A0x5f1d4c6c6fc909bc!2s500%20Terry%20Francois%20St%2C%20San%20Francisco%2C%20CA%2094158%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1616600445066!5m2!1ses-419!2smx" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "nombre": "Bolso de alpaca",
+      "descripcion": "Bolso hecho a mano con lana de alpaca.",
+      "precio": 20.0,
+      "imagen": "img/bolso.webp"
+    },
+    {
+      "id": 2,
+      "nombre": "Frasco de vidrio",
+      "descripcion": "Frasco de vidrio reciclado hecho en México.",
+      "precio": 10.0,
+      "imagen": "img/frasco.webp"
+    },
+    {
+      "id": 3,
+      "nombre": "Suéter tejido a mano",
+      "descripcion": "Hecho 100% con amor y estambre natural.",
+      "precio": 25.0,
+      "imagen": "img/sueter.webp"
+    },
+    {
+      "id": 4,
+      "nombre": "Lentes clásicos",
+      "descripcion": "Armazón negro ligero y resistente.",
+      "precio": 7.5,
+      "imagen": "img/lentes.webp"
+    },
+    {
+      "id": 5,
+      "nombre": "Collar artesanal",
+      "descripcion": "Collar de cuentas de madera pintadas a mano.",
+      "precio": 15.0,
+      "imagen": "img/collar.webp"
+    },
+    {
+      "id": 6,
+      "nombre": "Maceta de barro",
+      "descripcion": "Maceta decorativa de barro cocido con esmalte.",
+      "precio": 12.0,
+      "imagen": "img/maceta.webp"
+    }
+  ]
+  
