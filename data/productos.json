@@ -1,45 +1,117 @@
 [
-    {
-      "id": 1,
-      "nombre": "Bolso de alpaca",
-      "descripcion": "Bolso hecho a mano con lana de alpaca.",
-      "precio": 20.0,
-      "imagen": "img/bolso.webp"
-    },
-    {
-      "id": 2,
-      "nombre": "Frasco de vidrio",
-      "descripcion": "Frasco de vidrio reciclado hecho en México.",
-      "precio": 10.0,
-      "imagen": "img/frasco.webp"
-    },
-    {
-      "id": 3,
-      "nombre": "Suéter tejido a mano",
-      "descripcion": "Hecho 100% con amor y estambre natural.",
-      "precio": 25.0,
-      "imagen": "img/sueter.webp"
-    },
-    {
-      "id": 4,
-      "nombre": "Lentes clásicos",
-      "descripcion": "Armazón negro ligero y resistente.",
-      "precio": 7.5,
-      "imagen": "img/lentes.webp"
-    },
-    {
-      "id": 5,
-      "nombre": "Collar artesanal",
-      "descripcion": "Collar de cuentas de madera pintadas a mano.",
-      "precio": 15.0,
-      "imagen": "img/collar.webp"
-    },
-    {
-      "id": 6,
-      "nombre": "Maceta de barro",
-      "descripcion": "Maceta decorativa de barro cocido con esmalte.",
-      "precio": 12.0,
-      "imagen": "img/maceta.webp"
-    }
-  ]
+  {
+    "categoria": "Blusa",
+    "nombre": "Blusa floreada",
+    "descripcion": "Blusa floreada.",
+    "imagen": "img/blusa1.jpg",
+    "precio": 800
+  },
+  {
+    "categoria": "Blusa",
+    "nombre": "Blusa dorada",
+    "descripcion": "Blusa dorada.",
+    "imagen": "img/blusa2.jpg",
+    "precio": 800
+  },
+  {
+    "categoria": "Blusa",
+    "nombre": "Blusa negra floreada",
+    "descripcion": "Blusa negra floreada.",
+    "imagen": "img/blusa3.jpg",
+    "precio": 810
+  },
+  {
+    "categoria": "Blusa",
+    "nombre": "Blusa roja",
+    "descripcion": "Blusa roja.",
+    "imagen": "img/blusa4.jpg",
+    "precio": 800
+  },
+  {
+    "categoria": "Blusa",
+    "nombre": "Blusa blanca",
+    "descripcion": "Blusa blanca.",
+    "imagen": "img/blusa5.jpg",
+    "precio": 800
+  },
+  {
+    "categoria": "Manta",
+    "nombre": "Manta negra",
+    "descripcion": "Manta negra.",
+    "imagen": "img/manta1.jpg",
+    "precio": 300
+  },
   
+  {
+    "categoria": "Manta",
+    "nombre": "Manta girasoles",
+    "descripcion": "Manta girasoles.",
+    "imagen": "img/manta4.jpg",
+    "precio": 300
+  },
+  {
+    "categoria": "Manta",
+    "nombre": "Manta beige",
+    "descripcion": "Manta beige.",
+    "imagen": "img/manta5.jpg",
+    "precio": 300
+  },
+  
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura2",
+    "descripcion": "Figura2.",
+    "imagen": "img/fig2.jpg",
+    "precio": 700
+  },
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura3",
+    "descripcion": "Figura3.",
+    "imagen": "img/fig3.jpg",
+    "precio": 900
+  },
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura4",
+    "descripcion": "Figura4.",
+    "imagen": "img/fig4.jpg",
+    "precio": 8800
+  },
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura5",
+    "descripcion": "Figura5.",
+    "imagen": "img/fig5.jpg",
+    "precio": 690
+  },
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura6",
+    "descripcion": "Figura6.",
+    "imagen": "img/fig6.jpg",
+    "precio": 900
+  },
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura7",
+    "descripcion": "Figura7.",
+    "imagen": "img/fig7.jpg",
+    "precio": 650
+  },
+  {
+    "categoria": "Figuras",
+    "nombre": "Figura8",
+    "descripcion": "Figura8.",
+    "imagen": "img/fig8.jpg",
+    "precio": 850
+  },
+  
+  {
+    "categoria": "Abanico",
+    "nombre": "Abanico blanco",
+    "descripcion": "Abanico blanco.",
+    "imagen": "img/abanico.jpg",
+    "precio": 250
+  }
+]

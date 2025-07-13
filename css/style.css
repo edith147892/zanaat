@@ -1,0 +1,80 @@
+.nuestra-historia {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nuestra-historia h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.nuestra-historia h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #8b0000;
+  margin: 10px auto 0;
+}
+
+.historia-contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.historia-img {
+  flex: 1;
+  min-width: 100px;
+}
+
+.historia-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.historia-texto {
+  flex: 2;
+  min-width: 300px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.historia-texto p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.historia-texto em {
+  font-style: italic;
+}
+
+.historia-texto strong {
+  font-weight: bold;
+}
+
+.compromiso-texto {
+  flex: 2;
+  min-width: 300px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.compromiso-texto p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}

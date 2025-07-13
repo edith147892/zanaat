@@ -1,0 +1,81 @@
+<!-- nosotros.html mejorado profesionalmente -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zanaat - Nosotros</title>
+  <meta name="description" content="Conoce la historia y el compromiso de Zanaat con los artesanos mexicanos." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="js/login.js"></script>
+  <script defer src="js/carrito.js"></script>
+</head>
+<body>
+  <header class="header">
+    <img src="img/logotipo.jpg" alt="Logotipo Zanaat" class="logo" />
+    <button class="menu-toggle" onclick="document.querySelector('.navbar').classList.toggle('activo')">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#tienda">Tienda</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="icons">
+      <a href="#" onclick="abrirLoginModal()"><i class="fas fa-user"></i> Iniciar sesión</a>
+      <button id="openCartBtn" class="cart-button">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="contador-carrito">0</span>
+      </button>
+    </div>
+    <div class="icono-perfil" onclick="abrirPerfilModal()" title="Ver perfil">
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="bienvenida">
+      <h1>Nuestra Historia</h1>
+      <p>Descubre el origen y propósito de Zanaat.</p>
+    </section>
+
+    <section class="nuestra-historia" id="historia">
+      <div class="historia-contenido">
+        <div class="historia-img">
+          <img src="img/valor.png" alt="Historia de Zanaat" />
+        </div>
+        <div class="historia-texto">
+          <p>En el corazón de un pequeño pueblo mexicano, rodeado de montañas y tradiciones, nació <strong>ZANAAT</strong>. Su nombre proviene de una palabra antigua que significa <em>“artesanía”</em>, y representa todo lo que somos: <strong>dedicación, arte, y raíces</strong>.</p>
+          <p>Nacimos de la tradición de una familia de artesanos que ha transmitido su legado de generación en generación. Cada producto que ofrecemos cuenta una historia: de identidad, cultura y amor por lo hecho a mano.</p>
+          <p>Nos dedicamos a llevar el arte mexicano a todo el país, conectando a los artesanos con personas que valoran la autenticidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="compromiso">
+      <h2>Compromiso con Nuestros Artesanos</h2>
+      <div class="compromiso-texto">
+        <p>En ZANAAT, nuestro mayor orgullo son las manos que dan vida a cada pieza. Trabajamos directamente con artesanos de diversas regiones de México, respetando sus tradiciones, valorando su tiempo y reconociendo el arte que hay en cada creación.</p>
+        <p>Cada producto representa nuestra promesa: impulsar el comercio justo, proteger el patrimonio cultural y contribuir al bienestar de quienes mantienen vivas nuestras raíces.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zanaat Artesanía. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="cartSidebar" class="cart-sidebar">
+    <button id="closeCartBtn" class="close-btn">✖</button>
+    <h2>Carrito (<span id="itemCount">0</span> item)</h2>
+    <div id="cartItems"></div>
+    <div class="cart-summary">
+      <p>Subtotal: $<span id="cartTotal">0.00</span></p>
+      <button class="checkout-btn">Ver carrito</button>
+    </div>
+  </div>
+</body>
+</html>

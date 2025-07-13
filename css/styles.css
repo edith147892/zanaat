@@ -1,282 +1,234 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    border-bottom: 1px solid #ccc;
-    background-color: white;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .navbar a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-  }
-  
-  .icons a {
-    margin-left: 15px;
-    color: black;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  #cart-count {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background: black;
-    color: white;
-    border-radius: 50%;
-    padding: 3px 6px;
-    font-size: 12px;
-  }
-  
-  .bienvenida {
-    background-color: #fde0b4;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .bienvenida h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .bienvenida p {
-    font-size: 18px;
-  }
-  
-  .carrusel-contenedor {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 370px; /* Ajusta según lo que desees */
-  }
-  
-  .carrusel {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carrusel img {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    padding: 0 10px;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 3rem 1rem;
-  }
-  
-  .producto {
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .img-container {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .img-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .hover-info {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    transform: translateY(100%);
-    transition: 0.3s;
-  }
-  
-  .img-container:hover .hover-info {
-    transform: translateY(0);
-  }
-  
-  .precio {
-    color: purple;
-    font-weight: bold;
-  }
-  
-  /* Modal */
-  .modal {
+/* ====== ESTILOS GENERALES ====== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf3;
+  color: #333;
+}
+
+header, footer {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ====== BIENVENIDA ====== */
+.bienvenida {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff0e1;
+}
+
+/* ====== CARRUSEL ====== */
+.carrusel-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+}
+
+.carrusel img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  scroll-snap-align: center;
+  border-radius: 8px;
+}
+
+.prev, .next {
+  display: none;
+}
+
+/* ====== PRODUCTOS ====== */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.btn-ver-mas {
+  padding: 0.5rem 1rem;
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* ====== HISTORIA ====== */
+.historia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff7ed;
+}
+
+.historia-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.historia-texto {
+  flex: 1;
+}
+
+/* ====== CONTACTO ====== */
+.contacto {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  text-align: center;
+}
+
+.redes-sociales a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* ====== MAPA ====== */
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* ====== MODALES ====== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ====== PERFIL ====== */
+.icono-perfil {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* ====== CARRITO ====== */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  max-width: 90%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .navbar {
     display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-  }
-  
-  .modal-contenido {
+    flex-direction: column;
     background-color: #fff;
-    margin: 10% auto;
-    padding: 2rem;
-    width: 300px;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-  }
-  
-  .cerrar {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .navbar.activo {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .historia {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px 0;
-  }
-  
-  .historia-texto h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
-  
-  .historia-texto h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-  
-  .historia-texto p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    font-size: 1.1em;
-  }
-  
-  .historia-imagen img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 0;
+    flex-direction: column;
   }
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .imagen-tienda {
-    width: 100%;
-  }
-  
-  .contacto {
-    margin-top: 30px;
-    font-size: 24px;
-  }
-  
-  .contacto p {
-    margin-bottom: 10px;
-  }
-  
-  .contacto a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #25D366; /* Verde de WhatsApp */
-    font-weight: bold;
-    font-size: 22px;
-  }
-  
-  .contacto i {
-    margin-right: 8px;
-  }
-  
-  .mapa {
-    margin-top: 50px;
-  }
-  
-  iframe {
-    width: 100%;
-    height: 400px;
-    border: 0;
+  .productos-grid {
+    grid-template-columns: 1fr;
   }
 
-  /* Estilo para los íconos de contacto */
-.contacto-icono {
-  font-size: 30px;
-  margin: 0 10px;
-  color: black;
-  transition: all 0.3s ease;
+  .modal-content {
+    width: 95%;
+  }
 }
 
-/* Efecto hover para WhatsApp */
-.contacto-icono.whatsapp:hover {
-  color: #25D366; /* Color oficial de WhatsApp */
-  transform: scale(1.2); /* Aumenta tamaño */
-}
-
-@media (max-width: 768px) {
-  .header { flex-direction: column; }
-  .productos { flex-direction: column; gap: 1rem; }
-  .carrusel-contenedor { height: 200px; }
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: #eee;
 }
